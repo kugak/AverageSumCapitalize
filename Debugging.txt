@@ -1,0 +1,99 @@
+# Debugging (explanation of code line by line)
+StudyHard.main.14	
+    Program starts > JVM Starts up and enters main method. 
+    New Current Stack Frame created.
+StudyHard.main.16	
+    Scanner gets instantiated.
+StudyHard.main.17	
+    Local reference variable ‘set1’ gets placed in the current Stack Frame and points to the Object of type WorkHard which has been instantiated into the heap.
+WorkHard.<init>:12	
+    Since we are entering a new method ‘WorkHard’ stack is created. 
+StudyHard.main:21	
+    An Input Dialog box is presented to user to get value 1.
+StudyHard.main:22	
+    The User Entered Input value is (String) is parsed to a double. 
+    The Double literal <<user entered value>> is passed from the calling method into the instance variable ‘value1’ in WorkHard.
+StudyHard.main:23	
+    An Input Dialog box is presented to user to get value 2.
+StudyHard.main:24	
+    The User Entered Input value is (String) is parsed to a double. 
+    The Double literal <<user entered value>> is passed from the calling method into the instance variable ‘value2’ in WorkHard.
+StudyHard.main:25	
+    An Input Dialog box is presented to user to get value 3.
+StudyHard.main:26	
+    The User Entered Input value is (String) is parsed to a double. 
+    The Double literal <<user entered value>> is passed from the calling method into the instance variable ‘value3’ in WorkHard.
+StudyHard.main:27	
+    An Input Dialog box is presented to user to get a string.
+    And that <<user entered value>> is declared in local variable ‘lowerCase’.
+StudyHard.main:30	
+    Method ‘outputSumNums()’ is being called from the main class.
+    New Stack Frame gets created for this method.
+WorkHard.outputSumNums:21	
+    The user entered values are passed onto the method and the values are declared to the instance variables (value1, value2, value3) in the ‘WorkHard’ class.
+    And the method does what it is programed to do. Calculate the sum of the three variables and store in in variable double ‘sum’.
+WorkHard.outputSumNums:24	
+    The result ‘sum’ is displayed in dialog box to user. 
+WorkHard.outputSumNums:32	
+    Method reaches the end of its code and the stack explodes and destroys all its valuable values.
+StudyHard.main:33	
+    Method ‘returnSumNums()’, is being called and local variable ‘sumReturn’ is declared to catch the return value of that method.
+    New Stack Frame gets created for this method.
+WorkHard.returnSumNums:38	
+    Method runs and the user entered values are passed on to the instance variables ‘value1, value2, value3’ and the method does what it was programmed to do – return the sum of the three values to locally declared variable ‘sum’.
+WorkHard.returnSumNums:39	
+    The local variable ‘sum’ of type double is asked to return the value. Method ends its job and gets destroyed along with its valuable values.
+StudyHard.main:33	
+    The method’s result is returned to the calling class and is caught in the local variable ‘sumReturn’ of type double.
+StudyHard.main:36	
+    The returned variable ‘sumReturn’ is displayed in dialog box to user. 
+StudyHard.main:45	
+    Method ‘outputAve()’ is being called. 
+    A New stack frame gets created in the stack.
+WorkHard.outputAve:48	
+    The user entered values are passed onto the method and the values are declared to the instance variables (value1, value2, value3) in the ‘WorkHard’ class.
+    And the method does what it is programed to do. Calculate the average of the three variables and store in in variable double ‘ave’
+WorkHard.outputAve:51	
+    The result is displayed in dialog box to user.
+WorkHard.outputAve:59	
+    The method reaches its end and gets destroyed along with its valuable values.
+StudyHard.main:48	
+    Method ‘aveReturn’ is being called.
+    A New Stack Frame gets created in the stack.
+WorkHard.getAve:64	
+    The user entered values are passed on to the method and the values are declared to the instance variables (value1, value2, value3) in the ‘WorkHard’ class.
+    Ant the method does its job calculate the average of the three values and stores it in local variable ‘ave’ of type double.
+WorkHard.getAve:65	
+    The method is asked to return the value.
+WorkHard.getAve:67	
+    The method reaches its end of its code block and its stack frame gets destroyed along with its valuable values.
+StudyHard.main:48	
+    The method’s result is returned to the calling class and is caught in the local variable ‘aveReturn’ of type double.
+StudyHard.main:51	
+    The result is displayed in dialog box to user.
+StudyHard.main:60	
+    Method ‘shout(lowerCase)’ is being called. And its argument is passed on to the method.
+    New stack frame gets created in the stack.
+WorkHard.shout:72	
+    The argument from the calling class is declared inside the local variable ‘name’ of type String in the method. 
+WorkHard.shout:73	
+    The result is displayed in a dialog box to user. 
+    The received word is changed to upper case using the method ‘input.toUpperCase()’.
+WorkHard.shout:79	
+    The method reaches its code block and its stack frame gets destroyed along with the valuable word.
+StudyHard.main:63	
+    Method ‘returnUpperCase’ is being called along with its argument. And local variable ‘returnUpperCase’ of type String is declared to catch the return result from the method.
+    New stack frame gets created in the stack.
+WorkHard.shout:84	
+    The argument passed on from the main class is being declared to the local variable ‘input’ of type String.
+WorkHard.shout:85	
+    A local variable ‘wordCapital’ of type String is declared to store the converted ‘word’ using method ‘input.toUpperCase()’.
+WorkHard.shout:86	
+    The local variable ‘wordCapital’ returns the final result.
+StudyHard.main:63	
+    The local variable ‘returnUpperCase’ catches the returned result from the method ‘returnShout’
+StudyHard.main:64	
+    The result gets displayed in a dialog box to the user.
+StudyHard.main:72	
+    Main method reaches end of its code blocks and its stack frame gets destroyed ending this amazing program.
+
